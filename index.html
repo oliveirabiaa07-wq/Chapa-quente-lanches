@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="apple-touch-icon" href="assets/favicon-192.png">
+<meta property="og:title" content="Chapa Quente Lanches">
+<meta property="og:description" content="Peça seu lanche pelo WhatsApp.">
+<meta property="og:image" content="assets/perfil-site.jpg">
+<meta name="description" content="Peça hambúrgueres, combos, batata turbinada, pastéis e cachorro-quente da Chapa Quente Lanches pelo WhatsApp.">
+<title>Chapa Quente Lanches | Peça pelo WhatsApp</title>
+<style>
+:root{--bg:#080808;--surface:#121212;--surface2:#191919;--red:#f11d22;--yellow:#ffd21a;--text:#fff;--muted:#b9b9b9;--border:#303030;--green:#19b85b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif}body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+.topline{background:var(--yellow);color:#080808;text-align:center;font-size:12px;font-weight:900;letter-spacing:.11em;padding:9px 12px;text-transform:uppercase}
+header{position:relative;isolation:isolate;overflow:hidden;background:#080808;border-bottom:1px solid #292929}
+header:before{content:"";position:absolute;inset:0;z-index:-2;background:url('assets/cardapio3.jpg') center 44%/cover;opacity:.27;filter:blur(1px) saturate(1.2);transform:scale(1.03)}
+header:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#080808 0%,rgba(8,8,8,.91) 43%,rgba(8,8,8,.48) 100%)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:36px;padding:58px 0 64px;min-height:510px}
+.brandline{display:flex;align-items:center;gap:13px;margin-bottom:24px}
+.brand-mark{width:58px;height:58px;border-radius:17px;background:#000;display:grid;place-items:center;color:#111;font-size:31px;box-shadow:0 7px 0 #a20c0c;overflow:hidden;border:1px solid #4b3500}.brand-mark img{width:100%;height:100%;object-fit:cover;display:block}
+.brand-name{font-weight:1000;letter-spacing:.04em;font-size:15px;text-transform:uppercase}.brand-name small{display:block;color:var(--yellow);font-size:11px;letter-spacing:.22em;margin-top:4px}
+.eyebrow{color:var(--yellow);font-size:12px;letter-spacing:.18em;font-weight:900;text-transform:uppercase}
+h1{font-size:clamp(44px,7vw,82px);line-height:.9;letter-spacing:-.055em;text-transform:uppercase;margin:15px 0 20px;font-weight:1000}
+h1 em{font-style:normal;color:var(--yellow);display:block;text-shadow:3px 4px 0 #7e0808}
+.hero-copy{font-size:17px;line-height:1.65;color:#dedede;max-width:560px;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:15px 20px;font-weight:950;border:1px solid transparent;transition:.18s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-green{background:var(--green);color:white;box-shadow:0 8px 24px #19b85b25}
+.btn-outline{border-color:#555;background:#111c}
+.hero-art{position:relative;min-height:340px;display:grid;place-items:center}
+.hero-art img{width:100%;max-width:470px;max-height:430px;object-fit:contain;filter:drop-shadow(0 22px 30px #000);border-radius:24px;mask-image:linear-gradient(to bottom,black 80%,transparent 100%)}
+.sticker{position:absolute;right:0;bottom:20px;background:var(--yellow);color:#111;font-weight:1000;text-transform:uppercase;padding:13px 17px;transform:rotate(-5deg);box-shadow:5px 5px 0 var(--red);border-radius:5px}
+nav{position:sticky;top:0;z-index:25;background:#090909ed;backdrop-filter:blur(14px);border-bottom:1px solid #282828}
+.nav-inner{display:flex;align-items:center;gap:8px;padding:11px 0;overflow-x:auto}
+.nav-inner a{white-space:nowrap;padding:10px 14px;border-radius:9px;font-weight:800;font-size:13px;color:#ddd}
+.nav-inner a:hover,.nav-inner a.active{background:var(--yellow);color:#111}
+.nav-spacer{flex:1;min-width:8px}
+.nav-order{background:var(--red)!important;color:#fff!important}
+section{padding:66px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:25px}
+.section-head h2{font-size:clamp(30px,5vw,46px);line-height:1;margin:0;text-transform:uppercase;letter-spacing:-.035em}
+.section-head h2 span{color:var(--yellow)}
+.section-head p{color:var(--muted);margin:0;font-size:14px}
+.promo{display:grid;grid-template-columns:1.3fr .7fr;gap:22px;align-items:center;padding:30px;border-radius:22px;border:1px solid #5b2b00;background:radial-gradient(circle at 100% 0,#5d1a00 0,transparent 42%),linear-gradient(115deg,#201006,#111);margin-bottom:24px}
+.promo h2{font-size:clamp(27px,4vw,42px);text-transform:uppercase;margin:0 0 8px}.promo h2 span{color:var(--yellow)}.promo p{color:#ddd;line-height:1.5;margin:0}
+.promo-badge{justify-self:end;border:2px solid var(--yellow);border-radius:50%;width:130px;height:130px;display:grid;place-items:center;text-align:center;color:var(--yellow);font-weight:1000;transform:rotate(8deg)}.promo-badge strong{font-size:26px;display:block}
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 20px}
+.filter{border:1px solid #383838;background:#141414;color:#ddd;padding:10px 15px;border-radius:999px;font-weight:800;font-size:13px}
+.filter.active{background:var(--yellow);color:#111;border-color:var(--yellow)}
+.search{width:min(100%,320px);background:#141414;border:1px solid #363636;border-radius:11px;color:#fff;padding:12px 14px;outline:none}
+.search:focus{border-color:var(--yellow)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.item{background:linear-gradient(145deg,#191919,#101010);border:1px solid #303030;border-radius:17px;padding:19px;display:flex;flex-direction:column;min-height:230px;transition:.2s}
+.item:hover{border-color:#746019;transform:translateY(-3px);box-shadow:0 15px 30px #0005}
+.item-label{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pill{font-size:10px;font-weight:1000;letter-spacing:.1em;text-transform:uppercase;background:#2b2410;color:var(--yellow);padding:6px 8px;border-radius:5px}
+.item h3{font-size:20px;margin:19px 0 8px;line-height:1.12}
+.item p{font-size:13px;color:#bdbdbd;line-height:1.5;margin:0 0 20px;flex:1}
+.item-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #2b2b2b;padding-top:14px}
+.price{font-size:22px;color:var(--yellow);font-weight:1000;white-space:nowrap}
+.add-btn{border:0;background:var(--red);color:#fff;border-radius:9px;padding:10px 13px;font-weight:900}
+.add-btn:hover{background:#ff393d}
+.combo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.combo{position:relative;overflow:hidden;background:linear-gradient(145deg,#211607,#111);border:1px solid #5a4211;border-radius:18px;padding:22px}
+.combo:after{content:"🍔";position:absolute;right:12px;top:8px;font-size:44px;opacity:.12;transform:rotate(15deg)}
+.combo h3{font-size:23px;margin:16px 0 8px}.combo p{color:#ccc;line-height:1.5;min-height:45px;font-size:14px}
+.combo .item-foot{margin-top:17px}
+.photo-strip{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.photo-strip img{width:100%;height:100%;max-height:650px;object-fit:contain;background:#090909;border:1px solid #292929;border-radius:15px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.info-card{padding:22px;border:1px solid #2c2c2c;background:#121212;border-radius:16px}
+.info-icon{font-size:24px;margin-bottom:12px}.info-card h3{margin:0 0 7px;color:var(--yellow);font-size:16px}.info-card p,.info-card a{margin:0;color:#ddd;font-size:14px;line-height:1.55;overflow-wrap:anywhere}
+.delivery-note{margin-top:18px;border-left:4px solid var(--yellow);padding:12px 15px;background:#15120a;color:#ddd;font-size:13px;line-height:1.5}
+footer{border-top:1px solid #292929;background:#050505;padding:34px 0 110px}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{font-weight:1000;text-transform:uppercase}.footer-brand span{color:var(--yellow)}.footer-links{display:flex;gap:14px;color:#ccc;font-size:13px}
+.cart-fab{position:fixed;right:18px;bottom:18px;z-index:30;background:var(--yellow);color:#111;border:0;border-radius:14px;padding:15px 18px;font-weight:1000;box-shadow:0 10px 30px #0009;display:flex;align-items:center;gap:9px}
+.cart-count{background:#111;color:#fff;border-radius:50%;min-width:25px;height:25px;display:grid;place-items:center;font-size:12px}
+.overlay{position:fixed;inset:0;background:#000b;z-index:50;display:none;justify-content:flex-end}
+.overlay.open{display:flex}
+.drawer{width:min(500px,100%);height:100%;overflow:auto;background:#101010;border-left:1px solid #333;padding:23px}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;padding-bottom:15px}
+.drawer-head h2{margin:0;font-size:27px}.close{background:#222;color:white;border:0;border-radius:9px;width:40px;height:40px;font-size:25px}
+.cart-empty{color:#aaa;text-align:center;padding:35px 10px}
+.cart-line{display:grid;grid-template-columns:1fr auto;gap:12px;padding:15px 0;border-bottom:1px solid #2b2b2b}
+.cart-line strong{display:block;margin-bottom:5px}.cart-line small{color:#aaa}
+.qty{display:flex;align-items:center;gap:9px}.qty button{border:0;background:#292929;color:white;border-radius:7px;width:29px;height:29px;font-size:18px}
+.cart-total{display:flex;justify-content:space-between;font-size:22px;font-weight:1000;margin:20px 0}.cart-total span{color:var(--yellow)}
+.form-grid{display:grid;gap:11px;margin:18px 0}
+.form-grid label{font-size:12px;color:#bbb;font-weight:800;display:grid;gap:6px}
+.form-grid input,.form-grid select,.form-grid textarea{width:100%;border:1px solid #393939;background:#191919;color:white;border-radius:9px;padding:12px;outline:none}
+.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:var(--yellow)}
+.checkout{width:100%;border:0;border-radius:11px;background:var(--green);color:#fff;padding:16px;font-weight:1000;font-size:15px}
+.fineprint{font-size:11px;line-height:1.5;color:#888;margin-top:12px}
+.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#fff;color:#111;padding:12px 18px;border-radius:999px;font-weight:900;z-index:70;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:15px;padding:42px 0}.hero-art{min-height:240px;max-height:310px}.hero-art img{max-height:300px;max-width:390px}.menu-grid,.combo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{align-items:start;flex-direction:column}.section-head p{line-height:1.5}}
+@media(max-width:560px){.wrap{width:min(100% - 26px,1160px)}.topline{font-size:10px}.hero{padding:35px 0 42px}.hero-art{min-height:210px}.hero-art img{max-height:240px}h1{font-size:53px}.hero-copy{font-size:15px}.btn{width:100%}.actions{display:grid}.section{padding:48px 0}.promo{grid-template-columns:1fr;padding:22px}.promo-badge{justify-self:start;width:95px;height:95px}.promo-badge strong{font-size:21px}.menu-grid,.combo-grid,.info-grid,.photo-strip{grid-template-columns:1fr}.item{min-height:0}.item p{margin-bottom:16px}.photo-strip img{max-height:none}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.search{width:100%}}
+
+.hero-logo{max-height:410px!important;object-fit:cover!important;object-position:center!important;border-radius:22px;filter:drop-shadow(0 20px 35px #000)!important}
+.new-dishes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.dish-card{overflow:hidden;background:linear-gradient(145deg,#191919,#0f0f0f);border:1px solid #4a3a13;border-radius:19px;box-shadow:0 15px 35px #0007}
+.dish-photo{background:#080808;aspect-ratio:16/9;overflow:hidden}
+.dish-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.dish-body{padding:19px}
+.dish-body h3{font-size:25px;margin:13px 0 7px}
+.dish-body p{color:#bbb;line-height:1.5;margin:0 0 18px}
+@media(max-width:560px){.new-dishes{grid-template-columns:1fr}.hero-logo{max-height:300px!important}}
+</style>
+</head>
+<body>
+<div class="topline">🔥 Chapa Quente Lanches • Peça agora pelo WhatsApp 🔥</div>
+<header>
+  <div class="wrap hero">
+    <div>
+      <div class="brandline"><div class="brand-mark"><img src="assets/perfil-site.jpg" alt="Chapa Quente Lanches"></div><div class="brand-name">Chapa Quente<small>LANCHES • SÃO GONÇALO</small></div></div>
+      <div class="eyebrow">Fome de verdade? É aqui.</div>
+      <h1>Seu pedido.<br><em>Seu momento.</em></h1>
+      <p class="hero-copy">Hambúrgueres caprichados, combos para dividir, batata turbinada, pastéis e cachorro-quente. Escolha seus favoritos e envie seu pedido direto para a gente.</p>
+      <div class="actions"><a class="btn btn-green" href="https://wa.me/5521966281888" target="_blank" rel="noopener">☏ Pedir pelo WhatsApp</a><a class="btn btn-outline" href="#cardapio">Ver cardápio ↓</a></div>
+    </div>
+    <div class="hero-art"><img class="hero-logo" src="assets/logo_nova.jpg" alt="Logo Chapa Quente Lanches"><div class="sticker">Sabor que<br>vicia!</div></div>
+  </div>
+</header>
+<nav><div class="wrap nav-inner">
+  <a href="#cardapio" class="active">Cardápio</a><a href="#combos">Combos</a><a href="#porcoes">Porções</a><a href="#novidades">Novidades</a><a href="#fotos">Fotos</a><a href="#contato">Contato</a><span class="nav-spacer"></span><a class="nav-order" href="https://wa.me/5521966281888" target="_blank" rel="noopener">Pedir agora ↗</a>
+</div></nav>
+<main>
+<section id="combos"><div class="wrap">
+  <div class="section-head"><h2>Combos <span>da casa</span></h2><p>Mais sabor para compartilhar. 🍔</p></div>
+  <div class="combo-grid" id="combo-grid"></div>
+</div></section>
+<section id="cardapio" style="padding-top:15px"><div class="wrap">
+  <div class="section-head"><h2>Escolha sua <span>fome</span></h2><p>Adicione os itens ao pedido. O total é calculado automaticamente.</p></div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="todos">Tudo</button><button class="filter" data-filter="lanches">Hambúrgueres</button><button class="filter" data-filter="combos">Combos individuais</button><button class="filter" data-filter="porcoes">Porções & pastéis</button><button class="filter" data-filter="cachorro">Cachorro-quente</button>
+    <input class="search" id="search" type="search" placeholder="🔎 Buscar no cardápio..." aria-label="Buscar no cardápio">
+  </div>
+  <div class="menu-grid" id="menu-grid"></div>
+</div></section>
+<section id="porcoes"><div class="wrap">
+  <div class="promo"><div><div class="eyebrow">A queridinha da casa</div><h2>Batata <span>turbinada</span> 🍟</h2><p>Cheddar, bacon em pedaços, parmesão e aquele toque especial. Escolha o tamanho no cardápio.</p></div><div class="promo-badge"><div>Escolha<br>seu tamanho<strong>M • G • GG</strong></div></div></div>
+</div></section>
+
+<section id="novidades"><div class="wrap">
+  <div class="section-head"><h2>Novidades <span>da casa</span></h2><p>Agora também tem frango a passarinho e calabresa acebolada.</p></div>
+  <div class="new-dishes">
+    <article class="dish-card">
+      <div class="dish-photo"><img src="assets/frango_passarinho.jpg" alt="Frango à passarinho com batata"></div>
+      <div class="dish-body">
+        <span class="pill">Porção</span>
+        <h3>Frango à passarinho</h3>
+        <p>Frango à passarinho acompanhado de batata.</p>
+        <div class="item-foot"><strong class="price">R$ 30,00</strong><button class="add-btn" onclick="addItem(newDishes,0)">+ Adicionar</button></div>
+      </div>
+    </article>
+    <article class="dish-card">
+      <div class="dish-photo"><img src="assets/calabresa_acebolada.jpg" alt="Calabresa acebolada com batata"></div>
+      <div class="dish-body">
+        <span class="pill">Porção</span>
+        <h3>Calabresa acebolada</h3>
+        <p>Calabresa acebolada acompanhada de batata.</p>
+        <div class="item-foot"><strong class="price">R$ 25,00</strong><button class="add-btn" onclick="addItem(newDishes,1)">+ Adicionar</button></div>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section id="fotos"><div class="wrap">
+  <div class="section-head"><h2>Feito para <span>dar fome</span></h2><p>Confira o cardápio visual da Chapa Quente.</p></div>
+  <div class="photo-strip"><img src="assets/cardapio1.jpg" alt="Bebidas e sabores"><img src="assets/cardapio3.jpg" alt="Ofertas e lanches da Chapa Quente"></div>
+</div></section>
+<section id="contato"><div class="wrap">
+  <div class="section-head"><h2>Faça seu <span>pedido</span></h2><p>Estamos a uma mensagem de distância.</p></div>
+  <div class="info-grid">
+    <div class="info-card"><div class="info-icon">💬</div><h3>WhatsApp</h3><a href="https://wa.me/5521966281888" target="_blank" rel="noopener">(21) 96628-1888</a></div>
+    <div class="info-card"><div class="info-icon">📸</div><h3>Instagram</h3><a href="https://www.instagram.com/chapa.quente_sg/" target="_blank" rel="noopener">@chapa.quente_sg</a></div>
+    <div class="info-card"><div class="info-icon">💳</div><h3>Pagamento</h3><p>Aceitamos cartões e Pix.</p></div>
+  </div>
+  <div class="delivery-note">🛵 <strong>Delivery:</strong> consulte a taxa de entrega pelo WhatsApp. Confirme disponibilidade e valor final antes de concluir o pedido.</div>
+</div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><div class="footer-brand">♛ Chapa Quente <span>Lanches</span></div><small style="display:block;color:#888;margin-top:7px">Sabor que vicia! • São Gonçalo</small></div><div class="footer-links"><a href="https://wa.me/5521966281888" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/chapa.quente_sg/" target="_blank" rel="noopener">Instagram</a><a href="#cardapio">Cardápio ↑</a></div></div></footer>
+
+<button class="cart-fab" onclick="openCart()">🛒 Meu pedido <span class="cart-count" id="cart-count">0</span></button>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeCart()">
+ <aside class="drawer" aria-label="Carrinho de compras">
+  <div class="drawer-head"><h2>Seu pedido 🛒</h2><button class="close" onclick="closeCart()" aria-label="Fechar">×</button></div>
+  <div id="cart-items"></div>
+  <div class="cart-total">Total dos itens <span id="cart-total">R$ 0,00</span></div>
+  <div class="form-grid">
+   <label>Seu nome<input id="customer-name" placeholder="Como podemos te chamar?"></label>
+   <label>Endereço de entrega<textarea id="customer-address" rows="2" placeholder="Rua, número, bairro e complemento"></textarea></label>
+   <label>Forma de pagamento<select id="payment"><option value="">Selecione</option><option>Pix</option><option>Cartão</option><option>Dinheiro</option></select></label>
+   <label>Troco (se pagar em dinheiro)<input id="change" placeholder="Ex.: troco para R$ 50,00"></label>
+   <label>Observações<textarea id="observations" rows="2" placeholder="Sem cebola, ponto da carne, etc."></textarea></label>
+  </div>
+  <button class="checkout" onclick="checkout()">Enviar pedido pelo WhatsApp ↗</button>
+  <p class="fineprint">O pedido será aberto no WhatsApp para você revisar e enviar. A taxa de entrega será confirmada pela loja.</p>
+ </aside>
+</div>
+<div class="toast" id="toast">Adicionado ao pedido ✓</div>
+<script>
+const products = [{"name":"Hambúrguer","desc":"Carne, queijo, presunto, salada e batata palha.","price":12,"cat":"lanches"},{"name":"X-Tudo","desc":"Carne, queijo, presunto, molho especial, bacon, ovo, salada, cheddar e batata palha.","price":15,"cat":"lanches"},{"name":"X-Calabresa","desc":"Carne, calabresa, queijo, presunto, molho especial, salada, cheddar e batata palha.","price":13,"cat":"lanches"},{"name":"X-Bacon","desc":"Carne, bacon, queijo, presunto, molho especial, salada, cheddar e batata palha.","price":13,"cat":"lanches"},{"name":"X-Duplo","desc":"2 carnes, 2 ovos, bacon, queijo, presunto, molho especial, salada, cheddar e batata palha.","price":20,"cat":"lanches"},{"name":"X-Triplo","desc":"3 carnes, 3 ovos, bacon, queijo, presunto, molho especial, salada, cheddar e batata palha.","price":30,"cat":"lanches"},{"name":"X-Chapa Quente","desc":"6 carnes, 4 ovos, bacon, queijo, presunto, molho especial, salada, cheddar e batata palha.","price":35,"cat":"lanches"},{"name":"X-Picanha","desc":"Carne de picanha, bacon, queijo, presunto, molho especial, salada, cheddar e batata palha.","price":22,"cat":"lanches"},{"name":"X-Duplo Picanha","desc":"2 carnes de picanha, bacon, queijo, presunto, molho especial, salada, cheddar e batata palha.","price":35,"cat":"lanches"},{"name":"Batata Turbinada M","desc":"Ketchup, maionese temperada, cheddar, bacon em pedaços e queijo parmesão.","price":15,"cat":"porcoes"},{"name":"Batata Turbinada G","desc":"Ketchup, maionese temperada, cheddar, bacon em pedaços e queijo parmesão.","price":20,"cat":"porcoes"},{"name":"Batata Turbinada GG","desc":"Ketchup, maionese temperada, cheddar, bacon em pedaços e queijo parmesão.","price":25,"cat":"porcoes"},{"name":"Pastel pequeno — Frango","desc":"Pastel pequeno com catupiry.","price":2,"cat":"porcoes"},{"name":"Pastel pequeno — Carne moída","desc":"Pastel pequeno com catupiry.","price":2,"cat":"porcoes"},{"name":"Pastel pequeno — Queijo","desc":"Pastel pequeno com catupiry.","price":2,"cat":"porcoes"},{"name":"Pastel pequeno — Queijo e presunto","desc":"Pastel pequeno com catupiry.","price":2,"cat":"porcoes"},{"name":"Pastel pequeno — Calabresa","desc":"Pastel pequeno com catupiry.","price":2,"cat":"porcoes"},{"name":"Pastel pequeno — Bacon","desc":"Pastel pequeno com catupiry.","price":2,"cat":"porcoes"},{"name":"Cachorro-quente tradicional","desc":"Salsicha e acompanhamentos.","price":10,"cat":"cachorro"},{"name":"Cachorro-quente especial","desc":"Linguiça e acompanhamentos.","price":12,"cat":"cachorro"},{"name":"Combo tradicional","desc":"X-Tudo + batata P simples + Guaracamp.","price":18,"cat":"combos"},{"name":"X-Tudo 2 por","desc":"2 X-Tudos.","price":25,"cat":"combos"},{"name":"Combo solteiro","desc":"X-Tudo + batata M turbinada + 1 maionese (sachê) + 1 Guaraná.","price":30,"cat":"combos"},{"name":"X-Tudão sem miséria","desc":"Carne, ovo, queijo, bacon, calabresa, milho, ervilha, azeitona, parmesão, alface, tomate, batata palha e molhos especiais. Acompanha Guaraná.","price":25,"cat":"combos"}];
+const newDishes = [
+  {name:"Frango à passarinho",desc:"Frango à passarinho acompanhado de batata.",price:30,cat:"porcoes"},
+  {name:"Calabresa acebolada",desc:"Calabresa acebolada acompanhada de batata.",price:25,cat:"porcoes"}
+];
+const combos = [{"name":"Combo 1","desc":"2 X-Tudos + 2 Guaracamps + batata turbinada","price":50,"cat":"combos"},{"name":"Combo 2","desc":"3 X-Tudos + 3 Guaracamps + batata turbinada","price":60,"cat":"combos"},{"name":"Combo 3","desc":"4 X-Tudos + batata turbinada + 1 Flexa","price":75,"cat":"combos"},{"name":"Combo 4","desc":"5 X-Tudos + batata turbinada + 1 Flexa","price":85,"cat":"combos"},{"name":"Combo 5","desc":"2 X-Duplos + batata turbinada + 2 Guaracamps","price":60,"cat":"combos"},{"name":"Combo 6","desc":"3 X-Duplos + batata turbinada + 3 Guaracamps","price":80,"cat":"combos"}];
+const allItems = [...products, ...combos];
+let cart = [];
+let activeFilter = 'todos';
+const fmt = n => n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function itemCard(x, idx, isCombo=false){
+ const catLabel = {lanches:'Hambúrguer',porcoes:'Porção',cachorro:'Cachorro-quente',combos:'Combo'}[x.cat] || 'Lanche';
+ return `<article class="${isCombo?'combo':'item'}">
+  <div class="item-label"><span class="pill">${catLabel}</span>${isCombo?'<span style="color:#ffd21a">★ OFERTA</span>':''}</div>
+  <h3>${safe(x.name)}</h3><p>${safe(x.desc)}</p>
+  <div class="item-foot"><strong class="price">${fmt(x.price)}</strong><button class="add-btn" onclick="addItem(${isCombo?'combos':'products'},${idx})">+ Adicionar</button></div>
+ </article>`;
+}
+function renderMenus(){
+ document.getElementById('combo-grid').innerHTML = combos.map((x,i)=>itemCard(x,i,true)).join('');
+ const q = document.getElementById('search').value.trim().toLowerCase();
+ const list = products.map((x,i)=>({...x,idx:i})).filter(x=>(activeFilter==='todos'||x.cat===activeFilter)&&(`${x.name} ${x.desc}`.toLowerCase().includes(q)));
+ document.getElementById('menu-grid').innerHTML = list.length ? list.map(x=>itemCard(x,x.idx,false)).join('') : '<p style="color:#aaa">Nenhum item encontrado. Tente outra busca.</p>';
+}
+function addItem(source,index){
+ const x=source[index];const found=cart.find(y=>y.name===x.name);
+ if(found)found.qty++;else cart.push({name:x.name,desc:x.desc,price:x.price,qty:1});
+ renderCart();document.getElementById('cart-count').textContent=cart.reduce((s,x)=>s+x.qty,0);
+ const toast=document.getElementById('toast');toast.textContent=`${x.name} adicionado ✓`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1400);
+}
+function renderCart(){
+ const el=document.getElementById('cart-items');
+ if(!cart.length)el.innerHTML='<div class="cart-empty">Seu carrinho está vazio.<br><span style="font-size:13px">Escolha algo gostoso no cardápio!</span></div>';
+ else el.innerHTML=cart.map((x,i)=>`<div class="cart-line"><div><strong>${safe(x.name)}</strong><small>${fmt(x.price)} cada</small></div><div class="qty"><button onclick="changeQty(${i},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${i},1)">+</button></div></div>`).join('');
+ document.getElementById('cart-total').textContent=fmt(cart.reduce((s,x)=>s+x.price*x.qty,0));
+}
+function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);document.getElementById('cart-count').textContent=cart.reduce((s,x)=>s+x.qty,0);renderCart()}
+function openCart(){document.getElementById('overlay').classList.add('open');document.body.classList.add('lock');renderCart()}
+function closeCart(){document.getElementById('overlay').classList.remove('open');document.body.classList.remove('lock')}
+function checkout(){
+ if(!cart.length){alert('Seu pedido está vazio. Adicione pelo menos um item.');return}
+ const name=document.getElementById('customer-name').value.trim();
+ const address=document.getElementById('customer-address').value.trim();
+ const payment=document.getElementById('payment').value;
+ const change=document.getElementById('change').value.trim();
+ const obs=document.getElementById('observations').value.trim();
+ if(!name){alert('Informe seu nome para identificar o pedido.');document.getElementById('customer-name').focus();return}
+ if(!address){alert('Informe o endereço de entrega.');document.getElementById('customer-address').focus();return}
+ if(!payment){alert('Selecione a forma de pagamento.');document.getElementById('payment').focus();return}
+ const lines=cart.map(x=>`${x.qty}x ${x.name} — ${fmt(x.price*x.qty)}`).join('\n');
+ const total=fmt(cart.reduce((s,x)=>s+x.price*x.qty,0));
+ const msg=`Olá, Chapa Quente! Quero fazer um pedido.%0A%0ANome: ${encodeURIComponent(name)}%0AEndereço: ${encodeURIComponent(address)}%0A%0A${encodeURIComponent(lines)}%0A%0ATotal dos itens: ${encodeURIComponent(total)}%0APagamento: ${encodeURIComponent(payment)}${change?'%0ATroco: '+encodeURIComponent(change):''}${obs?'%0AObservações: '+encodeURIComponent(obs):''}%0A%0APor favor, confirme a taxa de entrega e o prazo.`;
+ window.open(`https://wa.me/5521966281888?text=${msg}`,'_blank','noopener');
+}
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeFilter=btn.dataset.filter;renderMenus()}));
+document.getElementById('search').addEventListener('input',renderMenus);
+renderMenus();renderCart();
+</script>
+</body></html>
